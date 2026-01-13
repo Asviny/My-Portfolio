@@ -1,4 +1,20 @@
 :root,
+.light-theme {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --text-primary: #1a1a2e;
+  --text-muted: #555566;
+  --accent: #2563eb;
+  /* Deeper Blue for Light Theme contrast */
+  --accent-hover: #1d4ed8;
+  --border: rgba(0, 0, 0, 0.1);
+  --gradient: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  --card-bg: #f5f5f7;
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  color-scheme: light;
+}
+
 .dark-theme {
   --bg-primary: #282828;
   /* Deep Sky Blue / Midnight variant */
@@ -16,22 +32,6 @@
   --font-heading: 'Manrope', sans-serif;
   --font-body: 'Inter', sans-serif;
   color-scheme: dark;
-}
-
-.light-theme {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f7;
-  --text-primary: #1a1a2e;
-  --text-muted: #555566;
-  --accent: #2563eb;
-  /* Deeper Blue for Light Theme contrast */
-  --accent-hover: #1d4ed8;
-  --border: rgba(0, 0, 0, 0.1);
-  --gradient: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-  --card-bg: #f5f5f7;
-  --font-heading: 'Manrope', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  color-scheme: light;
 }
 
 html {

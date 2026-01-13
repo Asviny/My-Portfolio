@@ -3,7 +3,7 @@ import { FaSun, FaMoon, FaCode, FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     const navLinks = [
         { name: "Home", url: "#home" },
@@ -14,7 +14,7 @@ const Navbar = () => {
         { name: "Projects", url: "#projects" },
         { name: "Contact", url: "#contact" },
     ];
-    
+
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -45,8 +45,8 @@ const Navbar = () => {
     // Load saved theme on mount
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "light") {
-            setIsDarkMode(false);
+        if (savedTheme === "dark") {
+            setIsDarkMode(true);
         }
     }, []);
 

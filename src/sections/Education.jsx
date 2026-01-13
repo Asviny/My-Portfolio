@@ -8,7 +8,7 @@ const Education = () => {
             icon: <FaGraduationCap />,
             degree: "Bachelor of Information Technology",
             institution: "University of Colombo School of Computing",
-            duration: "2023 - 2027",
+            duration: "2023 -Present(2027)",
             description: "UCSC undergraduate passionate about backend development and web technologies.",
         },
         {
@@ -16,7 +16,7 @@ const Education = () => {
             icon: <FaCertificate />,
             degree: "Higher National Diploma in Business Management",
             institution: "Esoft University Jaffna",
-            duration: "2025 - 2027",
+            duration: "2025 - Present(2027)",
             description: "Currently pursuing Pearson BTEC Level 5 HND in Business Management.",
         },
         // {

@@ -11,7 +11,7 @@ const Footer = () => {
 
     const socialLinks = [
         { name: 'GitHub', url: 'https://github.com/Asviny', icon: <FaGithub /> },
-        { name: 'LinkedIn', url: 'www.linkedin.com/in/asviny-kunasingam-1bb281280', icon: <FaLinkedin /> },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/asviny-kunasingam-?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BpVlnEcniR7CecBE9yfcG%2Fg%3D%3D', icon: <FaLinkedin /> },
         { name: 'Email', url: 'mailto:asvinyksingam@gmail.com', icon: <FaEnvelope /> },
     ];
 

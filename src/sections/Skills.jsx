@@ -7,7 +7,7 @@ const Skills = () => {
         {
             icon: <FaServer />,
             title: "Backend Development",
-            description: "Building robust APIs and server-side applications with Node.js, Express, and databases like MongoDB and PostgreSQL.",
+            description: "Building robust REST APIs and server-side applications with JAVA ,Spring Boot, and databases like MongoDB and MySQL.",
         },
          {
             icon: <FaCode />,
@@ -17,18 +17,18 @@ const Skills = () => {
          {
             icon: <FaGithub />,
             title: "Version Control",
-            description: "Breaking down complex challenges into manageable pieces and finding elegant, efficient solutions.",
+            description: "Experienced in using Git and GitHub to manage code, track changes, and collaborate effectively.",
         },
         {
             icon: <FaProjectDiagram />,
             title: "Management",
-            description: "Breaking down complex challenges into manageable pieces and finding elegant, efficient solutions.",
+            description: "Understanding of HR, project, and marketing management concepts gained through academic research.",
         },
         
         {
             icon: <FaPaintRoller/>,
             title: "Canva Design",
-            description: "Staying up-to-date with the latest technologies and best practices in the ever-evolving tech landscape.",
+            description: "Creating simple and effective visual designs for academic and research presentations using Canva.",
         },
     ];
 
