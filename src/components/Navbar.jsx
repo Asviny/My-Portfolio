@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaSun, FaMoon, FaCode } from "react-icons/fa";
+import { FaSun, FaMoon, FaCode, FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -15,9 +15,19 @@ const Navbar = () => {
         { name: "Contact", url: "#contact" },
     ];
 
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     // Toggle theme
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
+    };
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
     };
 
     // Apply theme class to document
@@ -47,7 +57,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <a href="#home" className="navbar-logo">
+                <a href="#home" className="navbar-logo" onClick={closeMobileMenu}>
                     <div className="navbar-logo-hexagon">
                         <FaCode className="navbar-logo-icon" />
                     </div>
@@ -55,10 +65,10 @@ const Navbar = () => {
                 </a>
 
                 <div className="navbar-right">
-                    <ul className="navbar-menu">
+                    <ul className={`navbar-menu ${isMobileMenuOpen ? "active" : ""}`}>
                         {navLinks.map((link) => (
                             <li key={link.name}>
-                                <a href={link.url} className="navbar-link">
+                                <a href={link.url} className="navbar-link" onClick={closeMobileMenu}>
                                     {link.name}
                                 </a>
                             </li>
@@ -71,6 +81,10 @@ const Navbar = () => {
                         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
                     >
                         {isDarkMode ? <FaSun /> : <FaMoon />}
+                    </button>
+
+                    <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+                        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
                     </button>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import "./Projects.css";
+import ProjectImg1 from "../assets/images/Restuarant.png";
+import ProjectImg2 from "../assets/images/portfolio.png";
 
 const Projects = () => {
     const projectsData = [
@@ -7,7 +9,7 @@ const Projects = () => {
             id: 1,
             title: "Restuarant Management System",
             description: "A full-featured online store with payment integration and admin dashboard.",
-            image: "/src/assets/images/Restuarant.png", // Paths will be adjusted after image generation
+            image: ProjectImg1, // Paths will be adjusted after image generation
             tags: ["React", "SpringBoot", "MySQL"],
             link: "",
         },
@@ -15,7 +17,7 @@ const Projects = () => {
             id: 2,
             title: " Creative Portfolio",
             description: "A productivity tool for managing tasks with a drag-and-drop Kanban board.",
-            image: "/src/assets/images/porfolio.png",
+            image: ProjectImg2,
             tags: ["React", "Tailwind"],
             link: "https://github.com/Asviny/My-Portfolio.git",
         },

@@ -1,4 +1,5 @@
 import "./Hero.css";
+import heroImg from "../assets/images/as.jpg"
 
 const Hero = () => {
     return (
@@ -19,7 +20,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-image-container">
                     <div className="hero-image-wrapper">
-                        <img src="/src/assets/images/as.jpg" alt="Asviny Kunasingam" className="hero-image" />
+                        <img src={heroImg} alt="Asviny Kunasingam" className="hero-image" />
                     </div>
                 </div>
             </div>
@@ -28,4 +29,3 @@ const Hero = () => {
 };
 
 export default Hero;
-// C:\Users\ASUS\OneDrive\Desktop\PORTFOLIO\portfolio\Portfolio\src\assets\images\profile.jpg
