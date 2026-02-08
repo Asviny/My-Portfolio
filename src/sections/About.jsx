@@ -5,7 +5,7 @@ import React from "react";
 const About = () => {
     const aboutContent = {
         heading: "About Me",
-        intro: `I’m a dedicated Backend Developer focused on building secure, scalable, and high-performance applications. I enjoy solving complex problems and creating reliable systems that power modern web applications..`,
+        intro: `cd.`,
         ctaText: "Download CV",
         ctaLink: {Resume},
     };
