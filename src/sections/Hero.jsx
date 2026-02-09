@@ -9,10 +9,10 @@ const Hero = () => {
                 <div className="hero-content">
                     <p className="hero-greeting">Hello, I'm</p>
                     <h1 className="hero-name">Asviny Kunasingam</h1>
-                    <h2 className="hero-title">Backend Developer</h2>
+                    <h2 className="hero-title">Full Stack  Developer</h2>
                     <p className="hero-description">
-                        I build modern, scalable web applications with passion and precision. 
-                        I’m a backend developer specializing in REST API development using Spring Boot, with secure authentication and authorization powered by JWT and Spring Security
+                        I build modern, scalable web applications with passion and precision. I’m a Full Stack Developer specializing in React and TypeScript for building responsive user interfaces, and Spring Boot for developing secure,
+                        high-performance REST APIs with JWT-based authentication and Spring Security.
                     </p>
                     <div className="hero-buttons">
                         <a href="#projects" className="hero-btn primary">View Projects</a>

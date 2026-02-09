@@ -1,8 +1,6 @@
 .education {
     width: 100%;
-    background-color: var(--bg-primary);
     color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .education-container {
@@ -24,7 +22,7 @@
 }
 
 .education-heading {
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-size: var(--font-size-h2);
     font-weight: 700;
     margin: 0;
     background: var(--gradient);
@@ -47,38 +45,44 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     background-color: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.5rem 2rem;
+    border-radius: 24px;
+    padding: 2.5rem;
     text-align: left;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
 }
 
 .education-card:hover {
-    transform: translateX(10px);
+    transform: translateY(-8px);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(100, 108, 255, 0.1);
+    box-shadow: var(--shadow-xl);
 }
 
 .education-icon {
     font-size: 2rem;
-    color: var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: rgba(100, 108, 255, 0.1);
-    border-radius: 12px;
-    transition: all 0.3s ease;
+    width: 70px;
+    height: 70px;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    transition: all 0.4s ease;
     flex-shrink: 0;
 }
 
-.education-card:hover .education-icon {
+.education-icon svg {
     background: var(--gradient);
-    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.education-card:hover .education-icon {
+    transform: scale(1.05);
 }
 
 .education-info {
@@ -86,30 +90,34 @@
 }
 
 .education-degree {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin: 0 0 0.25rem;
-    color: var(--accent);
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
 }
 
 .education-institution {
-    font-size: 1.05rem;
-    color: var(--text-primary);
-    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
     font-weight: 600;
 }
 
 .education-duration {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 500;
     display: block;
+    background: var(--bg-secondary);
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
 }
 
 .education-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.7;
     color: var(--text-muted);
     margin: 0;
 }

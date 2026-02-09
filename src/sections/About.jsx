@@ -5,7 +5,9 @@ import React from "react";
 const About = () => {
     const aboutContent = {
         heading: "About Me",
-        intro: `cd.`,
+        intro: `I’m a dedicated Full Stack Developer focused on building secure, scalable, and high-performance web applications. 
+        I enjoy solving complex problems and developing reliable end-to-end systems, 
+        from intuitive user interfaces to robust backend architectures that power modern web applications.`,
         ctaText: "Download CV",
         ctaLink: {Resume},
     };
@@ -29,6 +31,7 @@ const About = () => {
                         <a href={Resume}className="about-btn secondary" target="_blank" rel="noopener noreferrer">
                             View CV
                         </a>
+                        
                     </div>
                 </div>
             </div>

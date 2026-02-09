@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import React from "react";
 
@@ -13,18 +14,37 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 
 function App() {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.15,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll(".reveal");
+    revealElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Navbar />
 
       <main>
-        <section id="home"><Hero /></section>
-        <section id="about"><About /></section>
-        <section id="experience"><Experience /></section>
-        <section id="education"><Education /></section>
-        <section id="skills"><Skills /></section>
-        <section id="projects"><Projects /></section>
-        <section id="contact"><Contact /></section>
+        <section id="home" className="reveal"><Hero /></section>
+        <section id="about" className="reveal"><About /></section>
+        <section id="experience" className="reveal"><Experience /></section>
+        <section id="education" className="reveal"><Education /></section>
+        <section id="skills" className="reveal"><Skills /></section>
+        <section id="projects" className="reveal"><Projects /></section>
+        <section id="contact" className="reveal"><Contact /></section>
       </main>
 
       <Footer />

@@ -64,7 +64,10 @@
 
 .navbar-logo-icon {
     font-size: 1.1rem;
-    color: var(--accent);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     position: relative;
     z-index: 2;
 }

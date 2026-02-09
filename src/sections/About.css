@@ -1,8 +1,6 @@
 .about {
     width: 100%;
-    background-color: var(--bg-primary);
     color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about-container {
@@ -21,8 +19,8 @@
 }
 
 .about-heading {
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    font-weight: 500;
+    font-size: var(--font-size-h2);
+    font-weight: 700;
     margin: 0;
     background: var(--gradient);
     -webkit-background-clip: text;
