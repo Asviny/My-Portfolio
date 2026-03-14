@@ -1,5 +1,6 @@
-import { FaCode, FaServer, FaLightbulb, FaRocket, FaPaintRoller, FaProjectDiagram, FaGit, FaGithub, FaBusinessTime, FaPaintBrush, FaJava, FaJs, FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaJava, FaJs, FaReact, FaHtml5, FaCss3Alt, FaPhp, FaWordpress, FaNodeJs } from "react-icons/fa";
 import { SiSpringboot, SiMysql, SiMongodb } from "react-icons/si";
+import Twemoji from "../components/Twemoji";
 import "./Skills.css";
 import React from "react";
 
@@ -7,30 +8,30 @@ const Skills = () => {
     const skillsData = [
 
         {
-            icon: <FaServer />,
+            icon: "💻",
             title: "Backend Development",
-            description: "Building robust REST APIs and server-side applications with Java, Spring Boot, and databases like MongoDB and MySQL.",
+            description: "Building robust REST APIs and server-side applications with Java, Spring Boot, Node.js and databases like MongoDB and MySQL.",
         },
         {
-            icon: <FaCode />,
+            icon: "⚛️",
             title: "Frontend Development",
             description: "Creating responsive, accessible, and performant user interfaces with React, TypeScript, and modern CSS.",
         },
         {
-            icon: <FaGithub />,
+            icon: "🔀",
             title: "Version Control",
             description: "Experienced in using Git and GitHub to manage code, track changes, and collaborate effectively.",
         },
         {
-            icon: <FaBusinessTime />,
+            icon: "📊",
             title: "Management",
             description: "Understanding of HR, project, and marketing management concepts gained through academic research.",
         },
 
         {
-            icon: <FaPaintBrush />,
-            title: "Canva Design",
-            description: "Creating simple and effective visual designs for academic and research presentations using Canva.",
+            icon: "🎨",
+            title: "Web Design",
+            description: "Creating simple and effective visual designs for academic and research presentations using Wordpress and Canva .",
         },
     ];
 
@@ -43,6 +44,9 @@ const Skills = () => {
         { icon: <FaReact />, name: "React", color: "#61DAFB" },
         { icon: <FaHtml5 />, name: "HTML5", color: "#E34F26" },
         { icon: <FaCss3Alt />, name: "CSS3", color: "#1572B6" },
+        { icon: <FaPhp />, name: "PHP", color: "#777BB4" },
+        { icon: <FaWordpress />, name: "WordPress", color: "#21759B" },
+        { icon: <FaNodeJs />, name: "Node.js", color: "#339933" },
     ];
 
     return (
@@ -55,7 +59,9 @@ const Skills = () => {
                 <div className="skills-grid">
                     {skillsData.map((skill, index) => (
                         <div className="skill-card" key={index}>
-                            <div className="skill-icon">{skill.icon}</div>
+                            <div className="skill-icon">
+                                <Twemoji emoji={skill.icon} size="2.5rem" />
+                            </div>
                             <h3 className="skill-title">{skill.title}</h3>
                             <p className="skill-description">{skill.description}</p>
                         </div>

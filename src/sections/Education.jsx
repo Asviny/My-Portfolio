@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaSchool, FaCertificate } from "react-icons/fa";
+import Twemoji from "../components/Twemoji";
 import "./Education.css";
 import React from "react";
 
@@ -6,7 +6,7 @@ const Education = () => {
     const educationData = [
         {
             id: 1,
-            icon: <FaGraduationCap />,
+            icon: "🎓",
             degree: "Bachelor of Information Technology",
             institution: "University of Colombo School of Computing",
             duration: "2023 - Present (2027)",
@@ -14,7 +14,7 @@ const Education = () => {
         },
         {
             id: 2,
-            icon: <FaCertificate />,
+            icon: "📜",
             degree: "Higher National Diploma in Business Management",
             institution: "Esoft University Jaffna",
             duration: "2025 - Present (2027)",
@@ -22,7 +22,7 @@ const Education = () => {
         },
         // {
         //     id: 3,
-        //     icon: <FaCertificate />,
+        //     icon: "📝",
         //     degree: "Full Stack Web Development Boot Camp",
         //     institution: "Online Academy",
         //     duration: "2022",
@@ -40,7 +40,9 @@ const Education = () => {
                 <div className="education-grid">
                     {educationData.map((edu) => (
                         <div className="education-card" key={edu.id}>
-                            <div className="education-icon">{edu.icon}</div>
+                            <div className="education-icon">
+                                <Twemoji emoji={edu.icon} size="2.2rem" />
+                            </div>
                             <div className="education-info">
                                 <h3 className="education-degree">{edu.degree}</h3>
                                 <p className="education-institution">{edu.institution}</p>

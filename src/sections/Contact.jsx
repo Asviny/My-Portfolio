@@ -1,4 +1,6 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { FaPhoneAlt } from "react-icons/fa";
+import Twemoji from "../components/Twemoji";
 import "./Contact.css";
 import React from "react";
 
@@ -6,21 +8,22 @@ const Contact = () => {
     const contactInfo = [
         {
             id: 1,
-            icon: <FaEnvelope />,
+            icon: <SiGmail style={{ color: '#EA4335' }} />,
             label: "Email",
             value: "asvinyksingam@gmail.com",
             link: "mailto:asvinyksingam@gmail.com",
         },
         {
             id: 2,
-            icon: <FaPhone />,
+            icon: <FaPhoneAlt style={{ color: '#25D366' }} />,
             label: "Phone",
             value: "+94 74 117 6343",
             link: "tel:+94741176343",
         },
         {
             id: 3,
-            icon: <FaMapMarkerAlt />,
+            icon: "📍",
+            isEmoji: true,
             label: "Location",
             value: "Jaffna, Sri Lanka",
             link: "https://maps.google.com/?q=Jaffna,Sri+Lanka",
@@ -46,7 +49,9 @@ const Contact = () => {
                             target={info.id === 3 ? "_blank" : undefined}
                             rel={info.id === 3 ? "noopener noreferrer" : undefined}
                         >
-                            <div className="contact-icon">{info.icon}</div>
+                            <div className="contact-icon">
+                                {info.isEmoji ? <Twemoji emoji={info.icon} size="2.2rem" /> : info.icon}
+                            </div>
                             <div className="contact-info-text">
                                 <span className="contact-label">{info.label}</span>
                                 <p className="contact-value">{info.value}</p>

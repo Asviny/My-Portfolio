@@ -7,7 +7,7 @@ const Footer = () => {
 
     const personalInfo = {
         name: 'Asviny Kunasingam',
-        role: 'BackendDeveloper',
+        role: ' Fullstack Developer',
     };
 
     const socialLinks = [

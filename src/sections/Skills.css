@@ -57,13 +57,13 @@
 }
 
 .skill-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 95px;
+    height: 95px;
     background: var(--bg-secondary);
     border-radius: 20px;
     transition: all 0.4s ease;
@@ -71,10 +71,9 @@
 }
 
 .skill-icon svg {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill-title {
