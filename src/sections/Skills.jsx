@@ -11,13 +11,13 @@ const Skills = () => {
             icon: <FaServer />,
             title: "Backend Development",
             description: "Building robust REST APIs and server-side applications with Java, Spring Boot, Node.js and databases like MongoDB and MySQL.",
-            color: "#2a2e34ff",
+            color: "#040404ff",
         },
         {
             icon: <FaReact />,
             title: "Frontend Development",
             description: "Creating responsive, accessible, and performant user interfaces with React, TypeScript, and modern CSS.",
-            color: "#61DAFB",
+            color: "#070707ff",
         },
         {
             icon: <FaGithub />,
@@ -29,14 +29,14 @@ const Skills = () => {
             icon: <FaChartBar />,
             title: "Management",
             description: "Understanding of HR, project, and marketing management concepts gained through academic research.",
-            color: "#052164c6",
+            color: "#090909c6",
         },
 
         {
             icon: <FaGlobe />,
             title: "Web Design & Digital Marketing",
             description: "Creating clean, user-friendly website layouts and digital content using WordPress and Canva, with a focus on visual presentation and basic digital marketing support.",
-            color: "#29fcfcff",
+            color: "#040404ff",
         },
     ];
 
