@@ -28,6 +28,20 @@
   color-scheme: light;
 }
 
+[data-theme='dark'] {
+  --bg-primary: #0b1121; /* Rich Night Blue */
+  --bg-secondary: #1e293b; /* Slate Greyish Blue */
+  --text-primary: #f1f5f9; /* Near White Grey */
+  --text-muted: #94a3b8; /* Slate Grey */
+  --accent: #3b82f6; /* Electric Blue */
+  --accent-hover: #60a5fa;
+  --border: rgba(148, 163, 184, 0.2); /* Soft Slate Border */
+  --card-bg: #1a2236; /* Night Blue-Grey Card */
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.8);
+  color-scheme: dark;
+}
+
 html {
   font-family: var(--font-body);
   line-height: 1.6;

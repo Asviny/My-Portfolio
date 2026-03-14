@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaCode, FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
+import { FaCode, FaBars, FaTimes, FaArrowRight, FaSun, FaMoon } from "react-icons/fa";
 import "./Navbar.css";
 import React from "react";
 
@@ -18,6 +18,16 @@ const Navbar = () => {
 
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(theme === "light" ? "dark" : "light");
+    };
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -41,11 +51,6 @@ const Navbar = () => {
 
                 <div className="navbar-right">
                     <ul className={`navbar-menu ${isMobileMenuOpen ? "active" : ""}`}>
-                        <li className="mobile-only-close">
-                            <button className="sidebar-close-btn" onClick={closeMobileMenu}>
-                                <FaArrowRight />
-                            </button>
-                        </li>
                         {navLinks.map((link) => (
                             <li key={link.name}>
                                 <a href={link.url} className="navbar-link" onClick={closeMobileMenu}>
@@ -54,11 +59,13 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-
-
-
-
-
+                    <button 
+                        className="theme-toggle" 
+                        onClick={toggleTheme}
+                        aria-label="Toggle theme"
+                    >
+                        {theme === "light" ? <FaMoon /> : <FaSun className="sun-icon" />}
+                    </button>
 
                     <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
                         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}

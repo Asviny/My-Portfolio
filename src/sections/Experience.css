@@ -124,14 +124,29 @@
 @media (max-width: 768px) {
     .experience-card {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         gap: 1.5rem;
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.25rem;
+        border-radius: 20px;
     }
 
     .experience-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
+        width: 65px;
+        height: 65px;
+        font-size: 1.8rem;
+        margin-top: -1rem; /* Slight lift */
+    }
+
+    .experience-role {
+        font-size: 1.25rem;
+    }
+
+    .experience-company {
+        font-size: 1rem;
+    }
+
+    .experience-duration {
+        margin: 0.5rem auto 1rem;
     }
 }

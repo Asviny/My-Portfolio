@@ -1,4 +1,4 @@
-import { FaJava, FaJs, FaReact, FaHtml5, FaCss3Alt, FaPhp, FaWordpress, FaNodeJs } from "react-icons/fa";
+import { FaJava, FaJs, FaReact, FaHtml5, FaCss3Alt, FaPhp, FaWordpress, FaNodeJs, FaServer, FaGithub, FaBullhorn, FaChartBar, FaGlobe } from "react-icons/fa";
 import { SiSpringboot, SiMysql, SiMongodb } from "react-icons/si";
 import Twemoji from "../components/Twemoji";
 import "./Skills.css";
@@ -8,30 +8,35 @@ const Skills = () => {
     const skillsData = [
 
         {
-            icon: "💻",
+            icon: <FaServer />,
             title: "Backend Development",
             description: "Building robust REST APIs and server-side applications with Java, Spring Boot, Node.js and databases like MongoDB and MySQL.",
+            color: "#2a2e34ff",
         },
         {
-            icon: "⚛️",
+            icon: <FaReact />,
             title: "Frontend Development",
             description: "Creating responsive, accessible, and performant user interfaces with React, TypeScript, and modern CSS.",
+            color: "#61DAFB",
         },
         {
-            icon: "🔀",
+            icon: <FaGithub />,
             title: "Version Control",
             description: "Experienced in using Git and GitHub to manage code, track changes, and collaborate effectively.",
+            color: "#090909ff",
         },
         {
-            icon: "📊",
+            icon: <FaChartBar />,
             title: "Management",
             description: "Understanding of HR, project, and marketing management concepts gained through academic research.",
+            color: "#052164c6",
         },
 
         {
-            icon: "🎨",
-            title: "Web Design",
-            description: "Creating simple and effective visual designs for academic and research presentations using Wordpress and Canva .",
+            icon: <FaGlobe />,
+            title: "Web Design & Digital Marketing",
+            description: "Creating clean, user-friendly website layouts and digital content using WordPress and Canva, with a focus on visual presentation and basic digital marketing support.",
+            color: "#29fcfcff",
         },
     ];
 
@@ -59,8 +64,12 @@ const Skills = () => {
                 <div className="skills-grid">
                     {skillsData.map((skill, index) => (
                         <div className="skill-card" key={index}>
-                            <div className="skill-icon">
-                                <Twemoji emoji={skill.icon} size="2.5rem" />
+                            <div className="skill-icon" style={{ color: skill.color }}>
+                                {typeof skill.icon === "string" ? (
+                                    <Twemoji emoji={skill.icon} size="2.5rem" />
+                                ) : (
+                                    skill.icon
+                                )}
                             </div>
                             <h3 className="skill-title">{skill.title}</h3>
                             <p className="skill-description">{skill.description}</p>

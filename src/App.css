@@ -13,10 +13,11 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: #ffffff;
+  background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 section {
@@ -29,12 +30,12 @@ section {
   position: relative;
   width: 100%;
   scroll-margin-top: 80px;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;
 }
 
 /* Consistent section backgrounds for seamless flow */
 section {
-  background: white;
+  background: var(--bg-primary);
 }
 
 h1,
